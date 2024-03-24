@@ -190,13 +190,11 @@ proc xth_cp_close_file {} {
   
   global xth
 
-  xth_cp_data_tree_clear      
+  xth_cp_data_tree_clear
 
   if {!$xth(cp,fopen)} {
     return
   }
-  
-  xth_cp_write_file $xth(cp,ffull)
 
   # disable controls
   $xth(cp,editor).txt delete 1.0 end
